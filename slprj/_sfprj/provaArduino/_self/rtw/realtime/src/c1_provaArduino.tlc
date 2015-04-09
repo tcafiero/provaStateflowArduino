@@ -1,0 +1,90 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_active_c1_provaArduino"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c1_provaArduino"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_uno"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "main.uno"\
+    }\
+    ChartData {\
+      Name         "was_uno"\
+      Description  "StatePrevActiveChild"\
+      SFName       ""\
+      Path         "main.uno"\
+    }\
+    ChartData {\
+      Name         "is_active_uno"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "main.uno"\
+    }\
+    ChartData {\
+      Name         "is_due"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "main.due"\
+    }\
+    ChartData {\
+      Name         "was_due"\
+      Description  "StatePrevActiveChild"\
+      SFName       ""\
+      Path         "main.due"\
+    }\
+    ChartData {\
+      Name         "is_active_due"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "main.due"\
+    }\
+    ChartData {\
+      Name         "is_tre"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "main.tre"\
+    }\
+    ChartData {\
+      Name         "was_tre"\
+      Description  "StatePrevActiveChild"\
+      SFName       ""\
+      Path         "main.tre"\
+    }\
+    ChartData {\
+      Name         "is_active_tre"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "main.tre"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
